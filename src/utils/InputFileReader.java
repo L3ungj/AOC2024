@@ -21,7 +21,7 @@ public final class InputFileReader {
     }
 
     public static InputFileReader getInstance() {
-        if(instance == null) 
+        if (instance == null)
             instance = new InputFileReader();
         return instance;
     }
@@ -29,7 +29,7 @@ public final class InputFileReader {
     public static String readLine() {
         try {
             return getInstance().br.readLine();
-        } catch(IOException e) {
+        } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
     }
@@ -37,13 +37,17 @@ public final class InputFileReader {
     public static String[] readAllLines() {
         ArrayList<String> strings = new ArrayList<>();
         String s = readLine();
-        while(s != null) {
+        while (s != null) {
             strings.add(s);
             s = readLine();
-            
+
         }
         String[] ret = new String[strings.size()];
         ret = strings.toArray(ret);
         return ret;
+    }
+
+    public static String read() {
+        return String.join("\n", readAllLines());
     }
 }
