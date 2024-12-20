@@ -22,4 +22,8 @@ public class PairInt implements Comparable<PairInt> {
     public static PairInt add(PairInt a, PairInt b) {
         return new PairInt(a.x + b.x, a.y + b.y);
     }
+
+    public boolean inBounds(int n, int m) {
+        return 0 <= x && x < n && 0 <= y && y < m;
+    }
 }

@@ -19,7 +19,7 @@ public class Utils {
     }
 
     public static boolean inBounds(PairInt p, int n, int m) {
-        return 0 <= p.x && p.x < n && 0 <= p.y && p.y < m;
+        return p.inBounds(n, m);
     }
 
 }
