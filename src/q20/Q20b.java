@@ -11,16 +11,12 @@ public class Q20b {
         char[][] grid = InputFileReader.readGrid();
         int n = grid.length, m = grid[0].length;
         int[][] dist = new int[n][m];
-        int sx = -1, sy = -1, ex = -1, ey = -1;
+        int sx = -1, sy = -1;
         for(int i=0;i<n;++i) {
             for(int j=0;j<m;++j) {
                 if(grid[i][j] == 'S') {
                     sx = i;
                     sy = j;
-                }
-                if(grid[i][j] == 'E') {
-                    ex = i;
-                    ey = j;
                 }
             }
         }

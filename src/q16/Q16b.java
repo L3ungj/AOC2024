@@ -39,6 +39,7 @@ public class Q16b {
         boolean[][][] vis = new boolean[n][m][4];
         PriorityQueue<QuadInt> pq = new PriorityQueue<>();
         pq.add(new QuadInt(0, start.x, start.y, 0));
+        @SuppressWarnings("unchecked")
         ArrayList<int[]>[][][] parents = new ArrayList[n][m][4];
         for (int i = 0; i < n; ++i)
             for (int j = 0; j < m; ++j)
